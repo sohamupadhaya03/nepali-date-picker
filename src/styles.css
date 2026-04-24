@@ -1,0 +1,149 @@
+.soham-calendar {
+  width: 320px;
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.soham-day {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.soham-day:hover {
+  background: #e0f2fe;
+}
+
+.soham-selected {
+  background: #2563eb;
+  color: white;
+}
+
+.soham-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.soham-nav-btn {
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.soham-nav-btn:hover {
+  background: #f3f4f6;
+}
+
+.soham-select {
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.soham-day {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  background: #f9fafb;
+  border: 1px solid transparent;
+}
+
+.soham-day:hover {
+  background: #e0f2fe;
+  transform: scale(1.05);
+}
+
+.soham-selected {
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  border: 1px solid #1d4ed8;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.soham-today {
+  border: 1px solid #22c55e;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.soham-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.soham-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.soham-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.soham-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: #111827;
+}
+.soham-controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.soham-input {
+  width: 180px;          /* smaller width */
+  padding: 6px 10px;     /* smaller padding */
+  border: 1px solid #d1d5db;
+  border-radius: 6px;    /* slightly rounded corners */
+  font-size: 13px;       /* smaller font */
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.soham-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.soham-input:hover {
+  border-color: #9ca3af;
+}
+
+.soham-input-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.soham-icon {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 14px;
+  opacity: 0.6;
+}

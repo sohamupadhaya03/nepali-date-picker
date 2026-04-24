@@ -1,0 +1,64 @@
+{
+  "name": "soham-nepali-datepicker",
+  "version": "1.0.7",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "description": "A simple and customizable Nepali (Bikram Sambat) DatePicker for React with BS date support, min/max dates, and disabled dates.",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && npm run copy-css",
+    "copy-css": "copy src\\styles.css dist\\styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sohamupadhaya03/soham-nepali-datepicker.git"
+  },
+  "keywords": [
+    "nepali",
+    "bikram sambat",
+    "bs",
+    "datepicker",
+    "nepali datepicker",
+    "react",
+    "react-component",
+    "calendar",
+    "nepali calendar",
+    "bs date picker",
+    "soham-nepali-datepicker",
+    "nepali",
+    "bikram sambat",
+    "bs-date",
+    "nepali-date",
+    "datepicker",
+    "calendar",
+    "react",
+    "react-component",
+    "input",
+    "form",
+    "date-picker",
+    "nepali-calendar",
+    "bs-calendar",
+    "bs-datepicker",
+    "nepali-date-picker",
+    "react-datepicker",
+    "nepal",
+    "locale",
+    "custom-input",
+    "date-selector"
+  ],
+  "peerDependencies": {
+    "react": ">=17 <20",
+    "react-dom": ">=17 <20"
+  },
+  "dependencies": {
+    "nepali-date-converter": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "typescript": "^6.0.3"
+  }
+}
