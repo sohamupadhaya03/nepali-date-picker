@@ -1,7 +1,7 @@
 import { useMemo, useState, useEffect } from "react";
 import NepaliDate from "nepali-date-converter";
 import { toNepaliNumber } from "./Nepali_digit";
-
+import { bsToWeekday } from "./dateConverter";
 interface Props {
   value: string;
   onChange: (val: string) => void;
@@ -125,6 +125,11 @@ export default function NepaliDatePickerCustom({
 
   const weekDays = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 
+  const offset = useMemo(() => {
+    const firstDayBs = `${year}-${String(month).padStart(2, "0")}-01`;
+    return bsToWeekday(firstDayBs);
+  }, [year, month]);
+  
   return (
     <div className="soham-calendar">
       {/* HEADER */}
@@ -197,6 +202,12 @@ export default function NepaliDatePickerCustom({
 
       {/* GRID */}
       <div className="soham-grid">
+        {/* EMPTY CELLS (THIS FIXES WEEK ALIGNMENT) */}
+        {Array.from({ length: offset }).map((_, i) => (
+          <div key={`empty-${i}`} />
+        ))}
+
+        {/* DAYS */}
         {days.map((d) => {
           const date = format(d);
           const disabled = !isValidDate(date);
@@ -208,11 +219,11 @@ export default function NepaliDatePickerCustom({
               disabled={disabled}
               onClick={() => !disabled && onChange(date)}
               className={`
-  soham-day
-  ${value === date ? "soham-selected" : ""}
-  ${date === todayStr && value !== date ? "soham-today" : ""}
-  ${disabled ? "soham-disabled" : ""}
-`}
+          soham-day
+          ${value === date ? "soham-selected" : ""}
+          ${date === todayStr ? "soham-today" : ""}
+          ${disabled ? "soham-disabled" : ""}
+        `}
             >
               {toNepaliNumber(d)}
             </button>
