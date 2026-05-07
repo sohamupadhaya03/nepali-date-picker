@@ -6,7 +6,7 @@ A simple and customizable **Nepali (Bikram Sambat) DatePicker** for React.
 
 ## 📸 Preview
 
-![Soham Nepali Datepicker](https://i.imgur.com/21rIaj7.png)
+![Soham Nepali Datepicker](https://i.imgur.com/7KO61Oo.png)
 
 ## 🚀 Installation
 
