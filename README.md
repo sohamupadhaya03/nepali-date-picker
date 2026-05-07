@@ -77,7 +77,8 @@ bsToAd("2081-01-01");     // BS → AD
 Default styles included:
 
 ```js
-import "soham-nepali-datepicker/dist/styles.css";
+import "soham-nepali-datepicker/dist/styles.css"; //optional
+
 ```
 
 You can override classes:
